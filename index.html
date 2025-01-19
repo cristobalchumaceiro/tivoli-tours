@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img src="static/background-image.jpg" alt="A Waterfall in Tivoli">
+    <form>
+        <div>
+            <h1>Tivoli Tours</h1>
+        </div>
+        <div class="subtitle">
+            <h2>Embark on a hike around Villa Gregoriana</h2>
+        </div>
+        <fieldset class="personaldetails">
+            <legend>
+                Personal Details
+            </legend>
+            <div class="set">
+                <div class="input">
+                    <label for="firstname">First Name</label>
+                    <input type="text" name="firstname" id="firstname" required>
+                </div>
+                <div class="input">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname" id="lastname" required>
+                </div>
+            </div>
+            <div class="set">
+                <div class="input">
+                    <label for="phonenumber">Phone Number</label>
+                    <input type="text" name="phonenumber" id="phonenumber" pattern="(\d{11})">
+                </div>
+                <div class="input">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="tripdetails">
+            <legend>
+                Trip Details
+            </legend>
+            <div class="set">
+                <div class="input">
+                    <label for="tickets">Number of Tickets</label>
+                    <input type="number" min="1" max="10" required>
+                </div>
+                <div class="input">
+                    <label for="date">Date of Trip</label>
+                    <input type="date" name="date" id="date" required>
+                </div>
+            </div>
+            <div class="set">
+                <div class="input">
+                    <label class="tourguide" for="tourguide">Do you need a Tour Guide?</label>
+                </div>
+                <div class="input-radio">
+                    <input type="radio" name="tourguide" id="tourguide" value="true" required>
+                    <label for="tourguide" name="tourguide" id="tourguide">Yes</label>
+                    <input type="radio"  name="tourguide" id="tourguide" value="false">
+                    <label for="tourguide" name="tourguide" id="tourguide">No</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="agecheck">
+            <legend class="age">
+                Are you over 18?
+            </legend>
+            <div class="set">
+                <input type="checkbox" name="age" id="age" value="true" required>
+                <label for="age" name="age" id="age">Yes</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <button type="submit">Submit Enquiry</button>
+        </fieldset>
+    </form>
+</body>
+</html>
